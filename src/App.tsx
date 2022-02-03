@@ -14,7 +14,7 @@ import {
     Route
   } from "react-router-dom";
 import FourZeroFour from './components/shared/404';
-import ExampleComponent from './components/Sheet';
+import { SheetController } from './components/SheetController';
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
         <div className="App">
             <Switch>
                 { /* React router docs https://reactrouter.com/docs/en/v6 */}
-                <Route exact path="/" component={ ExampleComponent } />
+                <Route exact path="/" component={ SheetController } />
                 <Route path="*" component={ FourZeroFour } />
             </Switch>
         </div>
