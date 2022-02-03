@@ -4,6 +4,11 @@ export type CellType = {
     value: string;
 }
 
+export type SelectedCellType = {
+    row: number;
+    col: number;
+}
+
 export type SheetType = {
     cells: CellType[][];
 }

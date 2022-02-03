@@ -2,7 +2,7 @@ import { SheetType } from "../../types";
 import { SET_CELL_VALUE, SetCellActionType } from "../types/sheet";
 
 const initialState: SheetType = {
-    cells: []
+    cells: [],
 };
 
 export const sheet = (state = initialState, action: SetCellActionType): SheetType => {
