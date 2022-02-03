@@ -8,24 +8,20 @@
 
 import React from 'react';
 import './App.css';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route
-  } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import FourZeroFour from './components/shared/404';
 import { SheetController } from './components/SheetController';
 
 function App() {
   return (
     <Router>
-        <div className="App">
-            <Switch>
-                { /* React router docs https://reactrouter.com/docs/en/v6 */}
-                <Route exact path="/" component={ SheetController } />
-                <Route path="*" component={ FourZeroFour } />
-            </Switch>
-        </div>
+      <div className="App">
+        <Switch>
+          {/* React router docs https://reactrouter.com/docs/en/v6 */}
+          <Route exact path="/" component={SheetController} />
+          <Route path="*" component={FourZeroFour} />
+        </Switch>
+      </div>
     </Router>
   );
 }
