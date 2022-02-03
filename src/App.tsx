@@ -14,7 +14,7 @@ import {
     Route
   } from "react-router-dom";
 import FourZeroFour from './components/shared/404';
-import ExampleComponent from './components/ExampleComponent';
+import ExampleComponent from './components/Sheet';
 
 function App() {
   return (
