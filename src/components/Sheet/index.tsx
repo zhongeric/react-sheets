@@ -14,6 +14,11 @@ type State = {
     
 }
 
+const NUM_COLUMNS = 5;
+const NUM_ROWS = 5;
+
+// 5x5 rows x columns
+
 class Sheet extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props)
@@ -22,13 +27,35 @@ class Sheet extends React.Component<Props, State> {
 
     render() {
         return (
-            // You can assign a class to an element like this
-            <div className={styles.ExampleClass}>
-                {/* And assign multiple like this */}
-                <div className={`${styles.ExampleClass} ${sharedStyles.SharedClass}`}>
-                    Make cool shit :)
+            <div className={styles.SheetContainer}>
+                <div className={styles.SheetContent}>
+                    <div className={styles.ColumnHeaders}>
+                        <div></div>
+                        {
+                            Array.from(Array(NUM_COLUMNS).keys()).map(i => {
+                                return <span key={i} className={styles.ColumnHeader}>
+                                    {i}
+                                </span>
+                            })
+                        }
+                    </div>
+                    {
+                        Array.from(Array(NUM_ROWS).keys()).map((rowIndex) => {
+                            return (
+                                <>
+                                    <span>row-{rowIndex}</span>
+                                    {Array.from(Array(NUM_COLUMNS).keys()).map((columnIndex) => {
+                                            return (
+                                                <Cell key={`${rowIndex}-${columnIndex}`} />
+                                            )
+                                    })}
+                                </>
+                            )
+                        })
+                    }
                 </div>
             </div>
+            
         )
     }
 }

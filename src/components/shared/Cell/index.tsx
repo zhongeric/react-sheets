@@ -5,7 +5,7 @@ import sharedStyles from '../shared/Shared.module.css';
 
 export default function Cell({}) {
     return (
-        <div>
+        <div className={styles.Cell}>
             cell
         </div>
     )

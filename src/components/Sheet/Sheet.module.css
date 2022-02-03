@@ -1,3 +1,23 @@
-.ExampleClass {
-  display: grid;
+.SheetContainer {
+
+}
+
+.SheetContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.Row {
+    display: grid;
+}
+
+.ColumnHeaders {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column: 1/-1;
+}
+
+.RowHeaders {
+
 }
